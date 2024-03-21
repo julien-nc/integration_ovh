@@ -1,9 +1,7 @@
 # [OVH AI](https:///) integration in Nextcloud
 
 This app adds:
-* A SpeechToText provider using Whisper
 * A Text processing provider
-* An Image generation provider
 
 ## Ethical AI Rating
 ### Rating: 🟡
