@@ -1,5 +1,9 @@
 <template>
-	<div id="ovhai_prefs" class="section">
+	<h3>
+		integration_ovhai Text generation
+		{{ llmExtraParamHint }}
+	</h3>
+	<!--div id="ovhai_prefs" class="section">
 		<h2>
 			<OvhIcon class="icon" />
 			{{ t('integration_ovhai', 'OVH AI integration') }}
@@ -70,27 +74,29 @@
 				</NcButton>
 			</div>
 		</div>
-	</div>
+	</div-->
 </template>
 
 <script>
-import OpenInNewIcon from 'vue-material-design-icons/OpenInNew.vue'
-import HelpCircleIcon from 'vue-material-design-icons/HelpCircle.vue'
+// import OpenInNewIcon from 'vue-material-design-icons/OpenInNew.vue'
+// import HelpCircleIcon from 'vue-material-design-icons/HelpCircle.vue'
 
-import OvhIcon from './icons/OvhIcon.vue'
+// import OvhIcon from './icons/OvhIcon.vue'
 
-import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
-import NcTextField from '@nextcloud/vue/dist/Components/NcTextField.js'
+// import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
+// import NcTextField from '@nextcloud/vue/dist/Components/NcTextField.js'
 
-import { loadState } from '@nextcloud/initial-state'
-import { generateUrl } from '@nextcloud/router'
-import axios from '@nextcloud/axios'
-import { delay } from '../utils.js'
-import { showSuccess, showError } from '@nextcloud/dialogs'
+// import { loadState } from '@nextcloud/initial-state'
+// import { generateUrl } from '@nextcloud/router'
+// import axios from '@nextcloud/axios'
+// import { delay } from '../utils.js'
+import { onMounted } from 'vue'
+// import { showSuccess, showError } from '@nextcloud/dialogs'
 
 export default {
 	name: 'AdminSettings',
 
+	/*
 	components: {
 		OvhIcon,
 		OpenInNewIcon,
@@ -100,20 +106,25 @@ export default {
 	},
 
 	props: [],
+	*/
 
-	data() {
+	setup() {
+		onMounted(() => {
+			console.debug('aaaaaaaaaaaaa MOUNTED')
+		})
 		return {
-			state: loadState('integration_ovhai', 'admin-config'),
-			llmExtraParamHint: t('integration_ovhai', 'Extra parameters are model-specific. For example: {example}', { example: '{"max_tokens":128,"temperature":0.7}' }),
 		}
 	},
 
-	watch: {
+	data() {
+		return {
+			// state: loadState('integration_ovhai', 'admin-config'),
+			// llmExtraParamHint: t('integration_ovhai', 'Extra parameters are model-specific. For example: {example}', { example: '{"max_tokens":128,"temperature":0.7}' }),
+			llmExtraParamHint: 'Extra parameters are model-specific. For example: {example}',
+		}
 	},
 
-	mounted() {
-	},
-
+	/*
 	methods: {
 		onInput() {
 			delay(() => {
@@ -132,14 +143,15 @@ export default {
 			const url = generateUrl('/apps/integration_ovhai/admin-config')
 			axios.put(url, req)
 				.then((response) => {
-					showSuccess(t('integration_ovhai', 'OVH admin options saved'))
+					// showSuccess(t('integration_ovhai', 'OVH admin options saved'))
 				})
 				.catch((error) => {
-					showError(t('integration_ovhai', 'Failed to save OVH admin options'))
+					// showError(t('integration_ovhai', 'Failed to save OVH admin options'))
 					console.error(error)
 				})
 		},
 	},
+	*/
 }
 </script>
 

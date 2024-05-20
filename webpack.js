@@ -1,5 +1,5 @@
 const path = require('path')
-const webpackConfig = require('@nextcloud/webpack-vue-config')
+const webpackConfig = require('./webpack.config.js')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 

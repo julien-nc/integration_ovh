@@ -9,9 +9,8 @@
  * @copyright Julien Veyssier 2024
  */
 
-import Vue from 'vue'
-import './bootstrap.js'
 import AdminSettings from './components/AdminSettings.vue'
+import { createApp } from 'vue'
 
-const View = Vue.extend(AdminSettings)
-new View().$mount('#ovhai_prefs')
+const app = createApp(AdminSettings)
+app.mount('#ovhai_prefs')
