@@ -104,7 +104,7 @@ export default {
 	data() {
 		return {
 			state: loadState('integration_ovhai', 'admin-config'),
-			llmExtraParamHint: t('integration_ovhai', 'Extra parameters are model-specific. For example: {"max_tokens":128,"temperature":0.7}'),
+			llmExtraParamHint: t('integration_ovhai', 'Extra parameters are model-specific. For example: {example}', { example: '{"max_tokens":128,"temperature":0.7}' }),
 		}
 	},
 
