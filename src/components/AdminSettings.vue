@@ -16,8 +16,8 @@
 					@trailing-button-click="state.api_key = '' ; onInput()" />
 			</div>
 			<p class="settings-hint">
-				<InformationOutlineIcon :size="20" class="icon" />
-				<a href="https://ovh.com" target="_blank">
+				<OpenInNewIcon :size="20" class="icon" />
+				<a href="https://ovh.com" target="_blank" class="external">
 					{{ t('integration_ovhai', 'Get your API token on ovh.com') }}
 				</a>
 			</p>
@@ -74,7 +74,7 @@
 </template>
 
 <script>
-import InformationOutlineIcon from 'vue-material-design-icons/InformationOutline.vue'
+import OpenInNewIcon from 'vue-material-design-icons/OpenInNew.vue'
 import HelpCircleIcon from 'vue-material-design-icons/HelpCircle.vue'
 
 import OvhIcon from './icons/OvhIcon.vue'
@@ -93,7 +93,7 @@ export default {
 
 	components: {
 		OvhIcon,
-		InformationOutlineIcon,
+		OpenInNewIcon,
 		HelpCircleIcon,
 		NcButton,
 		NcTextField,
