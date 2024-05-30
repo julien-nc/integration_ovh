@@ -19,4 +19,4 @@ Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud
 
 ### Admin settings
 
-There is a "Connected accounts" **admin** settings section to set your OVH AI API key.
+There is a "Artificial intelligence" **admin** settings section to set your OVH AI API key.

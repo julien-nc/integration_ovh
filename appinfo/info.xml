@@ -4,7 +4,7 @@
     <name>OVH AI integration</name>
     <summary>Integration of OVH AI services</summary>
     <description><![CDATA[
-The OVH AI integration app provides a SpeechToText provider, a Text processing provider and an Image generation provider.
+The OVH AI integration app provides a Text processing provider.
 
 ## Ethical AI Rating
 ### Rating: 🟡
@@ -40,6 +40,5 @@ Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud
     </dependencies>
     <settings>
         <admin>OCA\OvhAi\Settings\Admin</admin>
-        <admin-section>OCA\OvhAi\Settings\AdminSection</admin-section>
     </settings>
 </info>
